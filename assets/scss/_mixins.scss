@@ -1,0 +1,46 @@
+@mixin  flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction
+};
+
+
+@mixin fontStyle($color) {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 30px;
+    text-decoration: none;
+    color:$color;
+};
+
+
+@mixin linkStyle($color,$size) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $size;
+    color: $color;
+    font-weight: bold;
+};
+
+
+
+@mixin  mobileLarge {
+    @media (max-width:1028px) {
+        @content
+    }
+};
+
+// 768
+
+@mixin  mobileMedium {
+    @media (max-width:768px) {
+        @content
+    }
+};
+
+@mixin  mobileSmall {
+    @media (max-width:576px) {
+        @content
+    }
+};
+
